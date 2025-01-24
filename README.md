@@ -35,8 +35,8 @@ Built a fully interactive advice generator with:
 
 ### Links
 
-- Live Site: [Add your live site URL here]
-- Repository: [Add your repository URL here]
+- Live Site: https://wisdomroll.netlify.app/
+- Repository: https://github.com/Mutairu-Lawal/fe-ch-advice-generator-app
 
 ## My process
 
