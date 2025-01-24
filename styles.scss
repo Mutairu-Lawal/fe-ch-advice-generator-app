@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+$font-size: 28px;
+$font-family: 'Manrope', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: $dark-blue;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.card {
+  width: 100%;
+  padding: 1em 1em 2em;
+  background: $dark-grayish-blue;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+
+  h3 {
+    text-transform: uppercase;
+    color: $neon-green;
+    font-size: x-small;
+    letter-spacing: 5px;
+  }
+
+  h1 {
+    color: $light-cyan;
+    margin: 16px 0;
+    font-size: smaller;
+
+    &::before {
+      content: '\201C';
+    }
+    &::after {
+      content: '\201D';
+    }
+  }
+
+  .loader {
+    margin: auto;
+    height: 30px;
+    aspect-ratio: 2;
+    display: grid;
+    background: radial-gradient(farthest-side, #000 15%, #0000 18%) 0 0/50% 100%,
+      radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) 0 0 /50% 50%,
+      radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) 0 100%/50% 50%;
+    background-repeat: repeat-x;
+    animation: l2 1.5s infinite linear;
+  }
+
+  @keyframes l2 {
+    0%,
+    15% {
+      background-position: 0 0, 0 0, 0 100%;
+    }
+    20%,
+    40% {
+      background-position: 5px 0, 0 0, 0 100%;
+    }
+    45%,
+    55% {
+      background-position: 0 0, 0 0, 0 100%;
+    }
+    60%,
+    80% {
+      background-position: -5px 0, 0 0, 0 100%;
+    }
+    85%,
+    100% {
+      background-position: 0 0, 0 0, 0 100%;
+    }
+  }
+
+  .divider {
+    width: 100%;
+    height: 1em;
+  }
+
+  .circle {
+    background-color: $neon-green;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px 5px $neon-green;
+    }
+  }
+
+  @media (min-width: 500px) {
+    padding: 1em 2em 2em;
+  }
+}

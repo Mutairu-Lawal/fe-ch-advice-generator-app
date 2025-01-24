@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: hsl(218, 23%, 16%);
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.card {
+  width: 100%;
+  padding: 1em 1em 2em;
+  background: hsl(217, 19%, 24%);
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+.card h3 {
+  text-transform: uppercase;
+  color: hsl(150, 100%, 66%);
+  font-size: x-small;
+  letter-spacing: 5px;
+}
+.card h1 {
+  color: hsl(193, 38%, 86%);
+  margin: 16px 0;
+  font-size: smaller;
+}
+.card h1::before {
+  content: "“";
+}
+.card h1::after {
+  content: "”";
+}
+.card .loader {
+  margin: auto;
+  height: 30px;
+  aspect-ratio: 2;
+  display: grid;
+  background: radial-gradient(farthest-side, #000 15%, rgba(0, 0, 0, 0) 18%) 0 0/50% 100%, radial-gradient(50% 100% at 50% 160%, #fff 95%, rgba(0, 0, 0, 0)) 0 0/50% 50%, radial-gradient(50% 100% at 50% -60%, #fff 95%, rgba(0, 0, 0, 0)) 0 100%/50% 50%;
+  background-repeat: repeat-x;
+  animation: l2 1.5s infinite linear;
+}
+@keyframes l2 {
+  0%, 15% {
+    background-position: 0 0, 0 0, 0 100%;
+  }
+  20%, 40% {
+    background-position: 5px 0, 0 0, 0 100%;
+  }
+  45%, 55% {
+    background-position: 0 0, 0 0, 0 100%;
+  }
+  60%, 80% {
+    background-position: -5px 0, 0 0, 0 100%;
+  }
+  85%, 100% {
+    background-position: 0 0, 0 0, 0 100%;
+  }
+}
+.card .divider {
+  width: 100%;
+  height: 1em;
+}
+.card .circle {
+  background-color: hsl(150, 100%, 66%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.card .circle:hover {
+  box-shadow: 0 0 10px 5px hsl(150, 100%, 66%);
+}
+@media (min-width: 500px) {
+  .card {
+    padding: 1em 2em 2em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
